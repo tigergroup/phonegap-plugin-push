@@ -39,12 +39,15 @@ public interface PushConstants {
     public static final String STYLE_TEXT = "text";
     public static final String BADGE = "badge";
     public static final String INITIALIZE = "init";
+    public static final String SUBSCRIBE = "subscribe";
+    public static final String UNSUBSCRIBE = "unsubscribe";
     public static final String UNREGISTER = "unregister";
     public static final String EXIT = "exit";
     public static final String FINISH = "finish";
     public static final String HAS_PERMISSION = "hasPermission";
     public static final String ANDROID = "android";
     public static final String SENDER_ID = "senderID";
+    public static final String CLEAR_BADGE = "clearBadge";
     public static final String CLEAR_NOTIFICATIONS = "clearNotifications";
     public static final String COLDSTART = "coldstart";
     public static final String ADDITIONAL_DATA = "additionalData";
@@ -58,4 +61,10 @@ public interface PushConstants {
     public static final String SET_APPLICATION_ICON_BADGE_NUMBER = "setApplicationIconBadgeNumber";
     public static final String CLEAR_ALL_NOTIFICATIONS = "clearAllNotifications";
     public static final String VISIBILITY = "visibility";
+    public static final String INLINE_REPLY = "inlineReply";
+    public static final String LOC_KEY = "locKey";
+    public static final String LOC_DATA = "locData";
+    public static final String TWILIO_BODY = "twi_body";
+    public static final String TWILIO_TITLE = "twi_title";
+    public static final String TWILIO_SOUND = "twi_sound";
 }

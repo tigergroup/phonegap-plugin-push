@@ -1,5 +1,95 @@
 # Change Log
 
+## [v1.8.3](https://github.com/phonegap/phonegap-plugin-push/tree/v1.8.3) (2016-07-09)
+[Full Changelog](https://github.com/phonegap/phonegap-plugin-push/compare/v1.8.2...v1.8.3)
+
+- 1.8.3 [view commit](http://github.com/phonegap/phonegap-plugin-push/commit/a0cfba9f85b7d7dfa3c244c9e78a03872ff938f9)
+- Bumping plugin version to 1.8.3 [view commit](http://github.com/phonegap/phonegap-plugin-push/commit/cc7d5abe55957cebfdd3b39ba670f8093bdac564)
+- Update pluginpub version [view commit](http://github.com/phonegap/phonegap-plugin-push/commit/0d8548d3166b7b4d34b32944b800c96e4aadf70a)
+- Issue#1282 Show app name if title is empty (#1285) [view commit](http://github.com/phonegap/phonegap-plugin-push/commit/3d7a3a39fb931aafa86be6b1568a682133c36de7)
+- Note about background app refresh (#1267) [view commit](http://github.com/phonegap/phonegap-plugin-push/commit/4f13533deb0c1b927dab9d9cddb13c53fdefd9b0)
+- Issue #1213: XDK instructions link for www template is incorrect (#1283) [view commit](http://github.com/phonegap/phonegap-plugin-push/commit/d2ede2bab4cd6462f7dffc4e2bc733d585107e89)
+- Merge pull request #1277 from dannywillems/patch-1 [view commit](http://github.com/phonegap/phonegap-plugin-push/commit/ea5ae88f3fcfa8fc605cf2c974b52d793bd2c4c9)
+- Unused variable app. Caused warnings. [view commit](http://github.com/phonegap/phonegap-plugin-push/commit/09dedb43481d207d0b17de4eb26c5a1904d08f65)
+- Issue #1254: [Question] Is it possible to get more than 3 action buttons on Android notifications? [view commit](http://github.com/phonegap/phonegap-plugin-push/commit/d8ab6665d878c8dec3ff9914c11a9329c8a415e7)
+- Use unique pending intent request code to enable multiple... (#1225) [view commit](http://github.com/phonegap/phonegap-plugin-push/commit/475883833556eb001e2e0adb986bd96b78bdcb2f)
+- Add `cordovaDependencies` section to package.json (#1232) [view commit](http://github.com/phonegap/phonegap-plugin-push/commit/6b343e78e9bfca921cef78eb504755477ecaeff9)
+- Updating CHANGELOG [view commit](http://github.com/phonegap/phonegap-plugin-push/commit/14afb94126acb51a6f10a2094f7f391f2f17dee5)
+
+## [v1.8.2](https://github.com/phonegap/phonegap-plugin-push/tree/v1.8.2) (2016-07-09)
+[Full Changelog](https://github.com/phonegap/phonegap-plugin-push/compare/v1.8.1...v1.8.2)
+
+- 1.8.2 [view commit](http://github.com/phonegap/phonegap-plugin-push/commit/b47d519abff667400c4863fe90a27ae88e3c0671)
+- Bumping plugin version to 1.8.2 [view commit](http://github.com/phonegap/phonegap-plugin-push/commit/738735ddcd9b60014beb4207c3ccdcd30ba7a803)
+- Localization from resources (#1196) [view commit](http://github.com/phonegap/phonegap-plugin-push/commit/2de9fc2827a18941ae6040e90ea0da5dc97652d8)
+- Issue #1199: iOS 10 is not firing the 'notification' event after clicking on a notification when the app is in hibernate [view commit](http://github.com/phonegap/phonegap-plugin-push/commit/e711b09b15a8e85156e9158026509522859c7900)
+- Use unique pending intent request code to enable multiple simultaneous notifications with action buttons (#1216) [view commit](http://github.com/phonegap/phonegap-plugin-push/commit/1fe640637fd67ec0ce2cf50ee1cab793ed01cfb7)
+- (doc) Fixing `ios.catetories` type in api reference. [view commit](http://github.com/phonegap/phonegap-plugin-push/commit/0a93fab9cec5ac2a2b813090958054e8e7b15f9a)
+- Issue #1155: [doc] Explain usage of the top level "priority" in GCM notifications [view commit](http://github.com/phonegap/phonegap-plugin-push/commit/ddaf48e089dc3cb46f9bd9f5e4678a2118b14a48)
+- Issue #1121: Notification is not shown on ios device [view commit](http://github.com/phonegap/phonegap-plugin-push/commit/432761202c43a1f2a4ba9c643df78b81b87d66fa)
+- Issue #1160: data.additionalData.[Object] as 'undefined' in iOS [view commit](http://github.com/phonegap/phonegap-plugin-push/commit/946052a895268155f56a7a3a1006d019599b46f9)
+- Few edits (#1179) [view commit](http://github.com/phonegap/phonegap-plugin-push/commit/f90b4bbf0e78adaa029737cf70b146ec97d09015)
+- Adding workshop tutorial link to the README (#1169) [view commit](http://github.com/phonegap/phonegap-plugin-push/commit/59800a930557bd864e527404e1035c2d8ac149c9)
+- added Azure server-side example (#1124) [view commit](http://github.com/phonegap/phonegap-plugin-push/commit/0bd4d0e612f6f1c62e33d147564b7e495436f15e)
+- Update appxmanifests with ToastCapable=true after plugin install (#1158) [view commit](http://github.com/phonegap/phonegap-plugin-push/commit/eeefc036a8600bea80135b6b14241509853444ab)
+- Updating CHANGELOG [view commit](http://github.com/phonegap/phonegap-plugin-push/commit/30d3d5dc733c80bc1687e5eff28d0614a0f38e51)
+
+## [v1.8.1](https://github.com/phonegap/phonegap-plugin-push/tree/v1.8.1) (2016-07-09)
+[Full Changelog](https://github.com/phonegap/phonegap-plugin-push/compare/v1.8.0...v1.8.1)
+
+- 1.8.1 [view commit](http://github.com/phonegap/phonegap-plugin-push/commit/95c27d29ef37bfd750972561022db53de256840d)
+- Bumping plugin version to 1.8.1 [view commit](http://github.com/phonegap/phonegap-plugin-push/commit/e4ba55ff310d4d931503de2547738cc169b6f968)
+- [Windows] Added a check on activation context existence (#1129) [view commit](http://github.com/phonegap/phonegap-plugin-push/commit/151c8cd97aa71742798e969dd9e6c2208b8c1f15)
+- Updating CHANGELOG [view commit](http://github.com/phonegap/phonegap-plugin-push/commit/4cd4ee00e2eb081d0d29d001e580009fba5c341a)
+
+## [v1.8.0](https://github.com/phonegap/phonegap-plugin-push/tree/v1.8.0) (2016-07-09)
+[Full Changelog](https://github.com/phonegap/phonegap-plugin-push/compare/v1.7.4...v1.8.0)
+
+- 1.8.0 [view commit](http://github.com/phonegap/phonegap-plugin-push/commit/d5a8480e6e230c959d8079554a6366f3605cb97e)
+- Bumping plugin version to 1.8.0 [view commit](http://github.com/phonegap/phonegap-plugin-push/commit/f8c784536e40ce6dddf14edeff7ad2a9ee944156)
+- Check that serviceWorker exists before unregistering [view commit](http://github.com/phonegap/phonegap-plugin-push/commit/ef004002d60d8028ed6aad2cef79d4d8ac6aed49)
+- Populate additionalData on browser platform [view commit](http://github.com/phonegap/phonegap-plugin-push/commit/63a29cdbbc0cd0374552d51e0e2d2217f5361f79)
+- Issue #683:  Support Android N inline reply actions [view commit](http://github.com/phonegap/phonegap-plugin-push/commit/e835ca31ac02a3455ece8c96938260935e2e7100)
+- Issue #1109: Installation.MD has a mistake [view commit](http://github.com/phonegap/phonegap-plugin-push/commit/89834b78a63ad6c927295eb5699204a0ccb49a73)
+- Use push server DELETE route to remove browser keys [view commit](http://github.com/phonegap/phonegap-plugin-push/commit/4615ea694bd5858bfdb8553c9a9390e1e30c2c36)
+- [chore] fix mis-spelling [view commit](http://github.com/phonegap/phonegap-plugin-push/commit/efdef52deec4f7e8b6b4ee87460bd87cc0479c74)
+- Browser: always call success on unimplemented methods [view commit](http://github.com/phonegap/phonegap-plugin-push/commit/1b8bf267674508361c68fb03b12f97608e87456b)
+- Update push url [view commit](http://github.com/phonegap/phonegap-plugin-push/commit/e1d8774f760d7a72a547d68e1b2ac367572e2b6d)
+- Merge branch 'browser' [view commit](http://github.com/phonegap/phonegap-plugin-push/commit/a2ad8da9a25a02a1b674e6adf0a37e18cde185ab)
+- Add browser platform support [view commit](http://github.com/phonegap/phonegap-plugin-push/commit/e8e0fe47001e461cf7fb7274d4c2b3dc687cd90e)
+- Issue #1080: clearAllNotifications not working on iOS [view commit](http://github.com/phonegap/phonegap-plugin-push/commit/4bea2a7469ab2bd677e12d440b457e1d5383b1f0)
+- [whoops] revert accidental commit of a pluginpub test [view commit](http://github.com/phonegap/phonegap-plugin-push/commit/da301e8a43a0a659947294c9d94f7fd09f5ac4b2)
+- [doc] remove deprecation notice on hasPermission [view commit](http://github.com/phonegap/phonegap-plugin-push/commit/d4b79a81c5ad85a4b566e5a23a19b10fa78dcf17)
+- Updating CHANGELOG [view commit](http://github.com/phonegap/phonegap-plugin-push/commit/8512a6cb7be3c0bb2b5db813c7aaff4c49fc52a2)
+- Bumping plugin version to 1.9.0 [view commit](http://github.com/phonegap/phonegap-plugin-push/commit/b015543b8a06526b7b70357407e635c180c473ee)
+- Update CHANGELOG [view commit](http://github.com/phonegap/phonegap-plugin-push/commit/e6f87a50d9f9cb3bd7c9ba599b3d3afbc0fd7aaf)
+
+## [1.7.4](https://github.com/phonegap/phonegap-plugin-push/tree/v1.7.4) (2016-07-09)
+[Full Changelog](https://github.com/phonegap/phonegap-plugin-push/compare/1.7.3...v1.7.4)
+
+**Closed issues:**
+
+- FYI: Resumed iOS 10 Notifications results in an error (fix problem on iOS) [\#1002](https://github.com/phonegap/phonegap-plugin-push/issues/1002)
+
+
+## [1.7.3](https://github.com/phonegap/phonegap-plugin-push/tree/1.7.3) (2016-07-06)
+[Full Changelog](https://github.com/phonegap/phonegap-plugin-push/compare/1.7.2...1.7.3)
+
+**Closed issues:**
+
+- Implemented clearBadge for Android [\#1030](https://github.com/phonegap/phonegap-plugin-push/issues/1030)
+- update badge number even if the app is totally closed [\#1027](https://github.com/phonegap/phonegap-plugin-push/issues/1027)
+- Documentation issue of Android pictures push [\#1028](https://github.com/phonegap/phonegap-plugin-push/issues/1028)
+- [iOS] unregister for a topic: parameter is not consistent between ios/android [\#1029](https://github.com/phonegap/phonegap-plugin-push/issues/1029)
+- [doc] Error installing in IOS, version requirement: >=4.1.0 [\#1047](https://github.com/phonegap/phonegap-plugin-push/issues/1047)
+
+## [1.7.2](https://github.com/phonegap/phonegap-plugin-push/tree/1.7.2) (2016-06-24)
+[Full Changelog](https://github.com/phonegap/phonegap-plugin-push/compare/1.7.1...1.7.2)
+
+**Closed issues:**
+
+- FYI: Resumed iOS 10 Notifications results in an error [\#1002](https://github.com/phonegap/phonegap-plugin-push/issues/1002)
+
 ## [1.7.1](https://github.com/phonegap/phonegap-plugin-push/tree/1.7.1) (2016-06-17)
 [Full Changelog](https://github.com/phonegap/phonegap-plugin-push/compare/1.7.0...1.7.1)
 

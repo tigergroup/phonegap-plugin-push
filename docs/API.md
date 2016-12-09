@@ -1,17 +1,19 @@
 # API
 
 - [.init()](#pushnotificationinitoptions)
-- [.hasPermission()](#pushnotificationhaspermissionsuccesshandler)
+- [.hasPermission() - Android & iOS only](#pushnotificationhaspermissionsuccesshandler---android--ios-only)
 - [push.on()](#pushonevent-callback)
   - [push.on('registration')](#pushonregistration-callback)
   - [push.on('notification')](#pushonnotification-callback)
   - [push.on('error')](#pushonerror-callback)
 - [push.off()](#pushoffevent-callback)
 - [push.unregister()](#pushunregistersuccesshandler-errorhandler-topics)
-- [push.setApplicationIconBadgeNumber()](#pushsetapplicationiconbadgenumbersuccesshandler-errorhandler-count---ios-only)
-- [push.getApplicationIconBadgeNumber()](#pushgetapplicationiconbadgenumbersuccesshandler-errorhandler---ios-only)
-- [push.finish()](#pushfinishsuccesshandler-errorhandler-id---ios-only)
-- [push.clearAllNotifications()](#pushclearallnotificationssuccesshandler-errorhandler---ios-android-only)
+- [push.subscribe()](#pushsubscribetopic-successhandler-errorhandler)
+- [push.unsubscribe()](#pushunsubscribetopic-successhandler-errorhandler)
+- [push.setApplicationIconBadgeNumber() - iOS & Android only](#pushsetapplicationiconbadgenumbersuccesshandler-errorhandler-count---ios--android-only)
+- [push.getApplicationIconBadgeNumber() - iOS only](#pushgetapplicationiconbadgenumbersuccesshandler-errorhandler---ios-only)
+- [push.finish() - iOS only](#pushfinishsuccesshandler-errorhandler-id---ios-only)
+- [push.clearAllNotifications() - iOS & Android only](#pushclearallnotificationssuccesshandler-errorhandler---ios--android-only)
 
 ## PushNotification.init(options)
 
@@ -42,9 +44,16 @@ Attribute | Type | Default | Description
 `android.iconColor` | `string` | | Optional. Sets the background color of the small icon on Android 5.0 and greater. [Supported Formats](http://developer.android.com/reference/android/graphics/Color.html#parseColor(java.lang.String))
 `android.sound` | `boolean` | `true` | Optional. If `true` it plays the sound specified in the push data or the default system sound.
 `android.vibrate` | `boolean` | `true` | Optional. If `true` the device vibrates on receipt of notification.
+`android.clearBadge` | `boolean` | `false` | Optional. If `true` the icon badge will be cleared on init and before push messages are processed.
 `android.clearNotifications` | `boolean` | `true` | Optional. If `true` the app clears all pending notifications when it is closed.
 `android.forceShow` | `boolean` | `false` | Optional. Controls the behavior of the notification when app is in foreground. If `true` and app is in foreground, it will show a notification in the notification drawer, the same way as when the app is in background (and `on('notification')` callback will be called *only when the user clicks the notification*). When `false` and app is in foreground, the `on('notification')` callback will be called immediately.
 `android.topics` | `array` | `[]` | Optional. If the array contains one or more strings each string will be used to subscribe to a GcmPubSub topic.
+
+#### Browser
+
+Attribute | Type | Default | Description
+--------- | ---- | ------- | -----------
+`browser.pushServiceURL` | `string` | `http://push.api.phonegap.com/v1/push` | Optional. URL for the push server you want to use.
 
 #### iOS
 
@@ -56,7 +65,7 @@ Attribute | Type | Default | Description
 `ios.badge` | `boolean` | `false` | Optional. If `true` the device sets the badge number on receipt of notification. **Note:** the value you set this option to the first time you call the init method will be how the application always acts. Once this is set programmatically in the init method it can only be changed manually by the user in Settings>Notifications>`App Name`. This is normal iOS behaviour.
 `ios.sound` | `boolean` | `false` | Optional. If `true` the device plays a sound on receipt of notification. **Note:** the value you set this option to the first time you call the init method will be how the application always acts. Once this is set programmatically in the init method it can only be changed manually by the user in Settings>Notifications>`App Name`. This is normal iOS behaviour.
 `ios.clearBadge` | `boolean` | `false` | Optional. If `true` the badge will be cleared on app startup.
-`ios.categories` | `array` | `[]` | Optional. The data required in order to enabled Action Buttons for iOS. See [Action Buttons on iOS](https://github.com/phonegap/phonegap-plugin-push/blob/master/docs/PAYLOAD.md#action-buttons-1) for more details.
+`ios.categories` | `Object` | `{}` | Optional. The data required in order to enabled Action Buttons for iOS. See [Action Buttons on iOS](https://github.com/phonegap/phonegap-plugin-push/blob/master/docs/PAYLOAD.md#action-buttons-1) for more details.
 
 #### iOS GCM support
 
@@ -92,6 +101,9 @@ var push = PushNotification.init({
 	android: {
 		senderID: "12345679"
 	},
+    browser: {
+        pushServiceURL: 'http://push.api.phonegap.com/v1/push'
+    },
 	ios: {
 		alert: "true",
 		badge: true,
@@ -102,8 +114,6 @@ var push = PushNotification.init({
 ```
 
 ## PushNotification.hasPermission(successHandler) - Android & iOS only
-
-> Deprecated this method will be remove in release 2.0.0
 
 Checks whether the push notification permission has been granted.
 
@@ -273,6 +283,51 @@ push.unregister(function() {
 });
 ```
 
+## push.subscribe(topic, successHandler, errorHandler)
+
+The subscribe method is used when the application wants to subscribe a new topic to receive push notifications.
+
+### Parameters
+
+Parameter | Type | Default | Description
+--------- | ---- | ------- | -----------
+`topic` | `String` | | Topic to subscribe to.
+`successHandler` | `Function` | | Is called when the api successfully subscribes.
+`errorHandler` | `Function` | | Is called when the api encounters an error while subscribing.
+
+### Example
+
+```javascript
+push.subscribe('my-topic', function() {
+	console.log('success');
+}, function(e) {
+	console.log('error:');
+	console.log(e);
+});
+```
+## push.unsubscribe(topic, successHandler, errorHandler)
+
+The unsubscribe method is used when the application no longer wants to receive push notifications from a specific topic but continue to receive other push messages.
+
+### Parameters
+
+Parameter | Type | Default | Description
+--------- | ---- | ------- | -----------
+`topic` | `String` | | Topic to unsubscribe from.
+`successHandler` | `Function` | | Is called when the api successfully unsubscribe.
+`errorHandler` | `Function` | | Is called when the api encounters an error while unsubscribing.
+
+### Example
+
+```javascript
+push.unsubscribe('my-topic', function() {
+	console.log('success');
+}, function(e) {
+	console.log('error:');
+	console.log(e);
+});
+```
+
 ## push.setApplicationIconBadgeNumber(successHandler, errorHandler, count) - iOS & Android only
 
 Set the badge count visible when the app is not running
@@ -346,7 +401,7 @@ push.finish(function() {
 }, 'push-1');
 ```
 
-## push.clearAllNotifications(successHandler, errorHandler) - iOS, Android only
+## push.clearAllNotifications(successHandler, errorHandler) - iOS & Android only
 
 Tells the OS to clear all notifications from the Notification Center
 
